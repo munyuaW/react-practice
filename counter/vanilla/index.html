@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vanilla JS Counter</title>
+	</head>
+	<body>
+		<button id="increment" style="padding: 5px">Click: 0</button>
+		<script>
+			let count = 0;
+			document
+				.getElementById("increment")
+				.addEventListener("click", (e) => {
+					count++;
+					e.target.textContent = `Click: ${count}`;
+				});
+		</script>
+	</body>
+</html>

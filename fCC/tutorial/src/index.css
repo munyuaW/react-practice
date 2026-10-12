@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+  h1 {
+    @apply text-2xl font-extrabold tracking-tight text-gray-900;
+  }
+  h2 {
+    @apply text-xl font-bold tracking-tight text-gray-800 pb-2;
+  }
+  h3 {
+    @apply text-lg font-semibold text-gray-700;
+  }
+  button {
+    @apply px-1.5 py-1 bg-cyan-200 rounded-sm m-0.5;
+  }
+  #main > div {
+    @apply border border-gray-200 p-4 rounded-sm flex flex-col space-y-1 max-w-63;
+  }
+  input {
+    @apply border border-gray-200 w-full p-0.5 rounded-sm;
+  }
+}

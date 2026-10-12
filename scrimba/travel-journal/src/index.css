@@ -1,0 +1,69 @@
+body,
+html {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: #f55a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 55px;
+}
+
+header img {
+  width: 24px;
+  margin-right: 7px;
+}
+
+header h1 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.entries {
+  padding: 30px 20px;
+}
+
+.entry-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.marker {
+  width: 10px;
+}
+
+.country {
+  text-transform: uppercase;
+}
+
+.date {
+  font-weight: bold;
+}

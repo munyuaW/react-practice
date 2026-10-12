@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #27292c;
+  color: white;
+}
+
+.container {
+  max-width: 400px;
+}
+
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 20px;
+  background: #21222a;
+}
+
+.header span {
+  font-size: 1.3rem;
+  color: #61dafb;
+  font-weight: 700;
+}
+
+.main {
+  padding: 30px 20px;
+}
+
+.facts-list {
+  padding: 0 20px;
+}
+
+.facts-list li {
+  padding-block: 10px;
+  line-height: 1.6;
+}
+
+.facts-list li::marker {
+  color: #61dafb;
+  font-size: 1.5rem;
+}
+
+.footer {
+  text-align: center;
+  background: #21222a;
+  padding: 10px 0;
+}
