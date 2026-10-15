@@ -1,0 +1,30 @@
+import Die from "./Die";
+
+export default function App() {
+  function getRandomNum() {
+    return Math.floor(Math.random() * 6 + 1);
+  }
+
+  function generateAllNewDice() {
+    return new Array(10).fill(0).map(getRandomNum);
+  }
+
+  console.log(generateAllNewDice());
+
+  return (
+    <main>
+      <div className="dice-container">
+        <Die value={1} />
+        <Die value={1} />
+        <Die value={1} />
+        <Die value={1} />
+        <Die value={1} />
+        <Die value={1} />
+        <Die value={1} />
+        <Die value={1} />
+        <Die value={1} />
+        <Die value={1} />
+      </div>
+    </main>
+  );
+}
