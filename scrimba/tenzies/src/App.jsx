@@ -17,13 +17,39 @@ export default function App() {
   }
 
   function rollDice() {
-    setDice(generateAllNewDice());
+    setDice((prevDice) =>
+      prevDice.map((die) =>
+        die.isHeld ? die : { ...die, value: getRandomNum() },
+      ),
+    );
   }
 
-  const diceElems = dice.map((die) => <Die key={die.id} value={die.value} isHeld={die.isHeld} />);
+  function hold(id) {
+    setDice((prevDice) =>
+      prevDice.map((die) =>
+        die.id === id ? { ...die, isHeld: !die.isHeld } : die,
+      ),
+    );
+  }
+
+  const diceElems = dice.map((die) => (
+    <Die
+      key={die.id}
+      id={die.id}
+      value={die.value}
+      isHeld={die.isHeld}
+      hold={hold}
+    />
+  ));
 
   return (
     <main>
+      <h1 className="title">Tenzies</h1>
+      <p className="instructions">
+        Roll until all dice are the same. Click each die to freeze it at its
+        current value between rolls.
+      </p>
+
       <div className="dice-container">{diceElems}</div>
       <button className="roll-btn" onClick={rollDice}>
         Roll
