@@ -3,7 +3,9 @@ const Die = ({ id, value, isHeld, hold }) => {
     <button
       className="die-btn"
       style={{ backgroundColor: isHeld ? "#59e391" : "white" }}
-      onClick={() => hold(id)}>
+      onClick={() => hold(id)}
+      aria-label={`Die with value ${value}`}
+      aria-pressed={isHeld}>
       {value}
     </button>
   );
