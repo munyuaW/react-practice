@@ -3,6 +3,7 @@ import UserObj from "./components/UserObj";
 import ItemsList from "./components/ItemsList";
 import FruitSearch from "./components/FruitSearch";
 import OTPGenerator from "./components/OTPGenerator";
+import FetchTodos from "./components/FetchTodos";
 
 export default function App() {
   return (
@@ -23,6 +24,9 @@ export default function App() {
 
       <h1>OTP Generator: useEffect and timers</h1>
       <OTPGenerator />
+
+      <h1>Fetching Data: useSWR and useFetch</h1>
+      <FetchTodos />
     </div>
   );
 }
